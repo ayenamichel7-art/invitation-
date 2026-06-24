@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitation Officielle d'Honneur</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./LOGO-MDT.png">
+</head>
+<body>
+
+    <div class="envelope-wrapper" id="envelope">
+        <div class="envelope-flap flap-top"></div>
+        <div class="envelope-flap flap-bottom"></div>
+        <div class="envelope-flap flap-left"></div>
+        <div class="envelope-flap flap-right"></div>
+        <div class="envelope-seal" id="seal">
+            <i class="fa-solid fa-envelope-open-text"></i>
+        </div>
+    </div>
+
+    <main class="invitation-card" id="invite-container">
+        
+        <div class="brand-emblem">
+            <span class="animated-butterfly">🦋</span>
+        </div>
+
+        <div class="slides-viewport">
+            
+            <div class="slide active" id="slide1">
+                <span class="badge">Invitation Exclusive</span>
+                <h1 class="hero-title">Pour Toi,<br><span class="gold-gradient">Personnellement</span></h1>
+                <div class="pulse-line"></div>
+            </div>
+
+            <div class="slide" id="slide2">
+                <span class="badge">Protocole d'Honneur</span>
+                <h2 class="guest-name" id="nom-invite">[Nom de l'invité]</h2>
+                <p class="emotional-text">
+                    <strong>Coucou Sa Majesté !</strong><br>
+                    J’ai pensé à toi avec tellement de force pour ce moment précis. Sincèrement, il m’est impensable de vivre cette <span class="highlight-red">Grande Croisade de Clôture</span> sans toi. Ta présence est ma priorité absolue.<br><br>
+                    Viens vivre ce temps puissant avec moi, la présence de Dieu va faire basculer des vies. Je compte énormément sur toi !
+                </p>
+            </div>
+
+            <div class="slide" id="slide3">
+                <p class="host-text"> <strong>JE T'INVITE</strong> </p>
+                <div class="theme-premium-box">
+                    <span class="theme-label">SOUS LE THÈME</span>
+                    <h3 class="theme-title-glow">JÉSUS-CHRIST SAUVE, DÉLIVRE ET GUÉRIT !</h3>
+                </div>
+            </div>
+
+            <div class="slide" id="slide4">
+                <span class="badge-gold">Au Programme</span>
+                <p class="sub-hero">Un moment d'impact exceptionnel dans la présence de Dieu :</p>
+                <div class="program-grid">
+                    <div class="program-card" style="--card-idx: 1;"><i class="fa-solid fa-bolt-lightning"></i> Louange & Adoration</div>
+                    <div class="program-card" style="--card-idx: 2;"><i class="fa-solid fa-masks-theater"></i> Prestations Artistiques</div>
+                    <div class="program-card" style="--card-idx: 3;"><i class="fa-solid fa-star"></i> Témoignages Inspirants</div>
+                    <div class="program-card" style="--card-idx: 4;"><i class="fa-solid fa-scroll"></i> Prédication & Impact</div>
+                    <div class="program-card" style="--card-idx: 5;"><i class="fa-solid fa-guitar"></i> Mini Concert unique</div>
+                </div>
+            </div>
+
+            <div class="slide" id="slide5">
+                <span class="badge">Le Rendez-vous</span>
+                <h3 class="event-date"><i class="fa-regular fa-calendar-days"></i> DIMANCHE 28 JUIN 2026</h3>
+                <p class="event-time">Ce dimanche à <strong>15h00 précises</strong></p>
+                <div class="location-box">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p>Centre Aéré Général Adjou Moumouni Bidossessi, Calavi</p>
+                </div>
+            </div>
+
+            <div class="slide" id="slide6">
+                <h3 class="final-headline">Ta place d'honneur est réservée.</h3>
+                <p class="final-sub">Confirme dès maintenant ta présence en un clic.</p>
+                <a href="#" id="whatsapp-btn" target="_blank" class="btn-modern-rsvp">
+                    <i class="fa-brands fa-whatsapp"></i> CONFIRME TA PRÉSENCE
+                </a>
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
