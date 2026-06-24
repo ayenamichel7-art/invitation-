@@ -63,10 +63,10 @@ document.addEventListener("DOMContentLoaded", () => {
             setTimeout(() => {
                 currentSlide.classList.remove('exit'); // Nettoie la classe pour éviter les conflits
                 nextSlide.classList.add('active');
+                updateBackground(currentSlideIndex);
             }, 600); // Synchronisé avec le timing de transition CSS
 
             currentSlideIndex++;
-            updateBackground(currentSlideIndex);
             
             // Relancer le chronomètre de la slide courante
             launchTimeline();
