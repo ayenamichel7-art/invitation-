@@ -90,6 +90,7 @@ body {
     max-width: 600px;
     width: 90%;
     height: 650px;
+    max-height: 92vh;
     border-radius: var(--radius-premium);
     box-shadow: var(--shadow-premium);
     padding: 3rem 2rem;
@@ -129,6 +130,9 @@ body {
 .slide {
     position: absolute;
     width: 100%;
+    max-height: 100%;
+    overflow-y: auto;
+    scrollbar-width: none; /* Firefox */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -138,6 +142,10 @@ body {
     transform: translateY(20px);
     pointer-events: none;
     transition: opacity 0.8s ease-in-out, transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.slide::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
 }
 
 .slide.exit {
@@ -315,11 +323,111 @@ body {
     box-shadow: 0 15px 30px rgba(255, 121, 0, 0.3);
 }
 
-@media (max-width: 480px) {
-    .invitation-card { height: 95vh; padding: 2rem 1rem; }
-    .hero-title { font-size: 1.9rem; }
-    .guest-name { font-size: 2rem; }
-    .theme-title-glow { font-size: 1.2rem; }
-    .event-date { font-size: 1.3rem; }
-    .program-card { padding: 0.8rem 1.2rem; font-size: 0.95rem; }
+@media (max-width: 600px) or (max-height: 720px) {
+    /* Main Card adjustments */
+    .invitation-card {
+        height: 92vh;
+        max-height: 600px;
+        padding: 1.5rem 1rem;
+    }
+    
+    /* Brand Emblem scale down */
+    .brand-emblem {
+        height: 50px;
+    }
+    .animated-butterfly {
+        font-size: 2.5rem;
+    }
+    
+    /* Viewport adjustments */
+    .slides-viewport {
+        height: 380px;
+    }
+    
+    /* General spacing */
+    .badge, .badge-gold {
+        font-size: 0.75rem;
+        margin-bottom: 0.75rem;
+        letter-spacing: 2px;
+    }
+    
+    /* Slide 1 */
+    .hero-title {
+        font-size: 1.8rem;
+    }
+    .pulse-line {
+        margin-top: 1rem;
+        width: 60px;
+    }
+    
+    /* Slide 2 (Personal Message) */
+    .guest-name {
+        font-size: 1.8rem;
+        margin-bottom: 0.75rem;
+        padding-bottom: 0.25rem;
+    }
+    .emotional-text {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+    
+    /* Slide 3 (Theme) */
+    .host-text {
+        font-size: 0.9rem;
+        margin-bottom: 0.75rem;
+    }
+    .theme-premium-box {
+        padding: 1.25rem 1rem;
+        margin-top: 0.5rem;
+    }
+    .theme-title-glow {
+        font-size: 1.15rem;
+    }
+    
+    /* Slide 4 (Program) */
+    .sub-hero {
+        font-size: 0.9rem;
+        margin-bottom: 0.75rem;
+    }
+    .program-grid {
+        gap: 0.4rem;
+        max-width: 320px;
+    }
+    .program-card {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+        border-radius: 10px;
+    }
+    .program-card i {
+        font-size: 0.95rem;
+        width: 15px;
+    }
+    
+    /* Slide 5 (Logistics) */
+    .event-date {
+        font-size: 1.2rem;
+    }
+    .event-time {
+        font-size: 0.95rem;
+        margin-bottom: 0.75rem;
+    }
+    .location-box {
+        padding: 0.75rem;
+        gap: 8px;
+    }
+    .location-box i {
+        font-size: 1.1rem;
+    }
+    .location-box p {
+        font-size: 0.85rem;
+    }
+    
+    /* Slide 6 (RSVP) */
+    .final-sub {
+        margin-bottom: 1.25rem;
+    }
+    .btn-modern-rsvp {
+        padding: 0.9rem 2rem;
+        font-size: 0.95rem;
+    }
 }
